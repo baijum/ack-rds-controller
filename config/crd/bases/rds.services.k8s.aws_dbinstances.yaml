@@ -889,6 +889,17 @@ spec:
                 description: The Amazon Resource Name (ARN) of the recovery point
                   in Amazon Web Services Backup.
                 type: string
+              binding:
+                description: Binding exposes the Secret for Service Binding to conform
+                  the Provisioned Service as per the Service Binding Specification
+                  for Kubernetes. Ref. https://github.com/servicebinding/spec#provisioned-service
+                properties:
+                  name:
+                    description: 'Name of the referent secret. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                    type: string
+                required:
+                - name
+                type: object
               caCertificateIdentifier:
                 description: The identifier of the CA certificate for this DB instance.
                 type: string

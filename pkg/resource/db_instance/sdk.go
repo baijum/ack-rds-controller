@@ -753,6 +753,35 @@ func (rm *resourceManager) sdkFind(
 		ackcondition.SetSynced(&resource{ko}, corev1.ConditionFalse, nil, nil)
 	}
 
+	sbsr := &svcapitypes.ServiceBindingSecretReference{}
+	ko.Status.Binding = sbsr
+	tmpSecret, err := rm.rr.SecretValueFromReference(ctx, r.ko.Spec.MasterUserPassword)
+	if err != nil {
+		return nil, ackrequeue.Needed(err)
+	}
+	ko.Status.Binding.Name = ko.Name
+	if ko.Status.Endpoint != nil {
+		secret := &corev1.Secret{
+			ObjectMeta: metav1.ObjectMeta{
+				Name:      ko.Name,
+				Namespace: ko.Namespace,
+			},
+			StringData: map[string]string{
+				"type":     *ko.Spec.Engine,
+				"provider": "aws",
+				"host":     *ko.Status.Endpoint.Address,
+				"port":     fmt.Sprintf("%v", *ko.Status.Endpoint.Port),
+				"username": *ko.Spec.MasterUsername,
+				"password": tmpSecret,
+				"database": *ko.Spec.Engine,
+			},
+		}
+		err = rm.rr.CreateSecret(ctx, secret)
+		if err != nil {
+			return nil, ackrequeue.Needed(err)
+		}
+	}
+
 	return &resource{ko}, nil
 }
 

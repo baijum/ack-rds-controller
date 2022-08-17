@@ -32,6 +32,8 @@ rules:
   - list
   - patch
   - watch
+  - create
+  - update
 - apiGroups:
   - ec2.services.k8s.aws
   resources:

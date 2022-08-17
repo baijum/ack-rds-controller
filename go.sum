@@ -68,13 +68,13 @@ github.com/aws-controllers-k8s/ec2-controller v0.0.16 h1:KCNeGks9WzMTf9QquV1qwBk
 github.com/aws-controllers-k8s/ec2-controller v0.0.16/go.mod h1:ib1x1axY932YylqbnW8f4ltz7NNqCt38KoVZ6gwNWxw=
 github.com/aws-controllers-k8s/kms-controller v0.0.15 h1:v9LLAE2Q517CvlP80EgXNq2juGCTLUfpn1OjBGY+n8Y=
 github.com/aws-controllers-k8s/kms-controller v0.0.15/go.mod h1:EbxvdZDS2n3JCMmhfjhavSutzt/9J0jXSvGj2bufS68=
-github.com/aws-controllers-k8s/runtime v0.18.4/go.mod h1:oA8ML1/LL3chPn26P6SzBNu1CUI2nekB+PTqykNs0qU=
-github.com/aws-controllers-k8s/runtime v0.19.2/go.mod h1:oA8ML1/LL3chPn26P6SzBNu1CUI2nekB+PTqykNs0qU=
-github.com/aws-controllers-k8s/runtime v0.19.3 h1:difFG8eFrQuIZb+FGEKMLrGlhY/QwKq++W33oMg+c3Q=
-github.com/aws-controllers-k8s/runtime v0.19.3/go.mod h1:oA8ML1/LL3chPn26P6SzBNu1CUI2nekB+PTqykNs0qU=
 github.com/aws/aws-sdk-go v1.42.0/go.mod h1:585smgzpB/KqRA+K3y/NL/oYRqQvpNJYvLm+LY1U59Q=
 github.com/aws/aws-sdk-go v1.44.27 h1:8CMspeZSrewnbvAwgl8qo5R7orDLwQnTGBf/OKPiHxI=
 github.com/aws/aws-sdk-go v1.44.27/go.mod h1:y4AeaBuwd2Lk+GepC1E9v0qOiTws0MIWAX4oIKwKHZo=
+github.com/baijum/ack-runtime v0.0.0-20220817081247-688c80b792af h1:NxVtF11b9fhJqNChAIcOcDxsEF/mGgKryrSh0l6fRqk=
+github.com/baijum/ack-runtime v0.0.0-20220817081247-688c80b792af/go.mod h1:oA8ML1/LL3chPn26P6SzBNu1CUI2nekB+PTqykNs0qU=
+github.com/baijum/ack-runtime v0.0.0-20220817084408-46978c6aa72e h1:PYZKbGCucxF23LqKX63u+zNSzfZrEFhT4JKJtiXdaNo=
+github.com/baijum/ack-runtime v0.0.0-20220817084408-46978c6aa72e/go.mod h1:oA8ML1/LL3chPn26P6SzBNu1CUI2nekB+PTqykNs0qU=
 github.com/benbjohnson/clock v1.0.3/go.mod h1:bGMdMPoPVvcYyt1gHDf4J2KE153Yf9BuiUKYMaxlTDM=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=

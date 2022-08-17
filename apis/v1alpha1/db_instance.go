@@ -1010,8 +1010,19 @@ type DBInstanceSpec struct {
 	VPCSecurityGroupRefs []*ackv1alpha1.AWSResourceReferenceWrapper `json:"vpcSecurityGroupRefs,omitempty"`
 }
 
+// ServiceBindingSecretReference defines a mirror of corev1.LocalObjectReference
+type ServiceBindingSecretReference struct {
+	// Name of the referent secret.
+	// More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+	Name string `json:"name"`
+}
+
 // DBInstanceStatus defines the observed state of DBInstance
 type DBInstanceStatus struct {
+	// Binding exposes the Secret for Service Binding to conform the Provisioned Service
+	// as per the Service Binding Specification for Kubernetes.
+	// Ref. https://github.com/servicebinding/spec#provisioned-service
+	Binding *ServiceBindingSecretReference `json:"binding,omitempty"`
 	// All CRs managed by ACK have a common `Status.ACKResourceMetadata` member
 	// that is used to contain resource sync state, account ownership,
 	// constructed ARN for the resource
